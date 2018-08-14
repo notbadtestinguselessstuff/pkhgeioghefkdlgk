@@ -129,7 +129,7 @@ client.on('guildMemberAdd', member => {
  
     if(sw[member.guild.id].styler === "image") {
         if (member.user.bot) return;
-const w = ['./image.png'];
+const w = ['./Nameless.png'];
         let Image = Canvas.Image,
             canvas = new Canvas(749, 198),
             ctx = canvas.getContext('2d');
