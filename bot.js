@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '+';
-const verifed = ["236192758765715456","315848387947790336","238723964434644993"]; 
+const verifed = ["236192758765715456"]; 
 
 
 client.on('ready',  () => {
 	client.user.setStatus("Online");
-	console.log('By : _xShaDowZx | Witherr');
+	console.log('By : _xShaDowZx');
 	console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
 	console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
 	console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
