@@ -28,15 +28,11 @@ client.on('guildMemberAdd', member => {
          moment.locale('ar-ly');
          var m = member.user;
         let yumz = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(m.avatarURL)
-        .addField('**:hugging:  | name :  **',`**${member}**`)
-        .addField('**:loudspeaker: | Hello there 👋 **' , `**Welcome to the server, ${member} :wave: **`)
-        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
-        .addField('**➡| You are the member number**',`**${member.guild.memberCount}**`)
-        .addField("**Name:**",`<@` + `${member.id}` + `>`, true)
-        .addField(' **Server**', `${member.guild.name}`,true)
-        .setFooter(`${member.guild.name}`)      
+        .setTitle("Member joind!")
+        .setColor("RANDOM")
+        .setThumbnail(member.user.avatarURL)
+        .addField("**Member name**", `[<@${member.user.id}>]`,true)
+        .addField("**Now we are**", `[${member.guild.memberCount}]`,true)    
      welcomer.send({embed:yumz});          
          
     
