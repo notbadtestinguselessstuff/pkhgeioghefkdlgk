@@ -21,20 +21,26 @@ const moment = require('moment');
 const jimp = require('jimp');
 const Canvas = require('canvas');
 
-client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'welcome');
-    if(!welcomer) return;
-      if(welcomer) {
-         moment.locale('ar-ly');
-         var m = member.user;
-        let yumz = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(m.avatarURL)
-        .setAuthor(m.username,m.avatarURL)
-        .addField('The Date joined Discord',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
-      
-         .setFooter(`${m.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
-     welcomer.send({embed:yumz});          
+     client.on('guildMemberAdd', member => {
+        let channel = member.guild.channels.find('name', 'welcome');
+        let memberavatar = member.user.avatarURL
+          if (!channel) return;
+        let embed = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(memberavatar)
+            .addField('**:hugging:  | name :  **',`**${member}**`)
+            .addField('**:loudspeaker: | Hello there 👋 **' , `**Welcome to the server, ${member} :wave: **`)
+            .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
+                    .addField('**➡| You are the member number**',`**${member.guild.memberCount}**`)
+                   
+                      .addField("**Name:**",`<@` + `${member.id}` + `>`, true)
+                         
+                                         .addField(' **Server**', `${member.guild.name}`,true)
+                                           
+         .setFooter(`${member.guild.name}`)
+            .setTimestamp()
+       
+            welcomer.send(embed);        
          
     
 
