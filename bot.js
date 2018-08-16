@@ -86,7 +86,7 @@ const w = ['./w2.png'];
                           
                 
                              
-welcomer.send(canvas.toBuffer()) //sendFile
+welcomer.sendFile(canvas.toBuffer()) //sendFile
 
 
 
