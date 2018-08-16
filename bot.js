@@ -21,32 +21,29 @@ const moment = require('moment');
 const jimp = require('jimp');
 const Canvas = require('canvas');
 
-     client.on('guildMemberAdd', member => {
-        let channel = member.guild.channels.find('name', 'welcome');
-        let memberavatar = member.user.avatarURL
-          if (!channel) return;
-        let embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setThumbnail(memberavatar)
-            .addField('**:hugging:  | name :  **',`**${member}**`)
-            .addField('**:loudspeaker: | Hello there 👋 **' , `**Welcome to the server, ${member} :wave: **`)
-            .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
-                    .addField('**➡| You are the member number**',`**${member.guild.memberCount}**`)
-                   
-                      .addField("**Name:**",`<@` + `${member.id}` + `>`, true)
-                         
-                                         .addField(' **Server**', `${member.guild.name}`,true)
-                                           
-         .setFooter(`${member.guild.name}`)
-            .setTimestamp()
-       
-            welcomer.send(embed);        
-         }
+client.on('guildMemberAdd', member => {
+     const welcomer =  member.guild.channels.find('name', 'welcome');
+    if(!welcomer) return;
+      if(welcomer) {
+         moment.locale('ar-ly');
+         var m = member.user;
+        let yumz = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(m.avatarURL)
+        .addField('**:hugging:  | name :  **',`**${member}**`)
+        .addField('**:loudspeaker: | Hello there 👋 **' , `**Welcome to the server, ${member} :wave: **`)
+        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
+        .addField('**➡| You are the member number**',`**${member.guild.memberCount}**`)
+        .addField("**Name:**",`<@` + `${member.id}` + `>`, true)
+        .addField(' **Server**', `${member.guild.name}`,true)
+        .setFooter(`${member.guild.name}`)      
+     welcomer.send({embed:yumz});          
+         
     
 
 
 
-const w = ['./w2.png'];
+const w = ['./img/w1.png'];
 
          let Image = Canvas.Image,
             canvas = new Canvas(400, 200),
