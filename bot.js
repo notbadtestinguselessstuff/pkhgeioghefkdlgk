@@ -41,7 +41,7 @@ const Canvas = require('canvas');
             .setTimestamp()
        
             welcomer.send(embed);        
-         
+         }
     
 
 
