@@ -66,7 +66,7 @@ const w = ['./w1.jpg']; //'./w2.png'
                         ctx.fillText(`Welcome to ${member.guild.name}`, 300, 130);
                         
                         ctx.font = "bold 16px Arial"; //12
-                        ctx.fontSize = '30px'; //20
+                        ctx.fontSize = '25px'; //20
                         ctx.fillStyle = "#f5b115";
                         ctx.textAlign = "center";
                         ctx.fillText(member.user.username, 200, 150); //200 150
