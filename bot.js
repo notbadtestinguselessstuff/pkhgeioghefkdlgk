@@ -59,15 +59,15 @@ const w = ['./w1.jpg']; //'./w2.png'
                     ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
                         if (err) return console.log(err);
                         
-                        ctx.font = "bold 20px Arial"; //12
-                        ctx.fontSize =  '40px'; //20 
-                        ctx.fillStyle = "#f1f1f1";
+                        ctx.font = "bold 16px Arial"; //12
+                        ctx.fontSize =  '30px'; //20 
+                        ctx.fillStyle = "#f5b115";
                         ctx.textAlign = "center";
                         ctx.fillText(`Welcome to ${member.guild.name}`, 300, 130);
                         
-                        ctx.font = "bold 20px Arial"; //12
-                        ctx.fontSize = '40px'; //20
-                        ctx.fillStyle = "#f1f1f1";
+                        ctx.font = "bold 16px Arial"; //12
+                        ctx.fontSize = '30px'; //20
+                        ctx.fillStyle = "#f5b115";
                         ctx.textAlign = "center";
                         ctx.fillText(member.user.username, 200, 150); //200 150
  
